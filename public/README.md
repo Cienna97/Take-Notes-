@@ -25,12 +25,15 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 #  Usage 
 
 This application will be for someone who is tired of taking notes with paper and pencil and would like to upgrade to a virtual notebook! This note book with allow you to take notes from your phone and save them so you'll always have them safe and on hand!
+Uses Express.js back end and will save and retrieve data from a JSON file.
 
 # Links 
 
 Github: 
 
 Live Application:
+
+Heroku: 
 
 # Screenshot 
 
