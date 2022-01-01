@@ -1,8 +1,9 @@
 const express = require('express');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
 const app = express();
-const { db } = require('./db/db');
-
-
+const PORT = process.env.PORT || 3001;
 
 
 
@@ -13,7 +14,7 @@ const { db } = require('./db/db');
 
 
 app.get('/api/db', (req, res) => {
-    res.json('Hello!');
+    res.json(db);
   });
 
 app.listen(3001, () => {
