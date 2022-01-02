@@ -5,7 +5,7 @@ const fs = require('fs');
 const uuid = require('uuid');
 
 const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = ulti.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
 class file {
