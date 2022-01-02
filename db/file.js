@@ -1,8 +1,8 @@
-import util from 'util';
+const util = require('util');
 const fs = require('fs');
 
 
-const uuidv1 = require('uuid/v1');
+const uuid = require('uuid');
 
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = ulti.promisify(fs.writeFile);
@@ -38,7 +38,7 @@ class file {
         if (!header || !text) {
             throw new Error("Must fill in 'header' and 'text' ");
         }
-            const newNote = {title, text, id: uuidv1() };
+            const newNote = {title, text, id: uuid() };
 
             return this.read.getNotes()
             .then((notes) => [...notes, newNote])
@@ -51,8 +51,8 @@ class file {
     removeNote(id) {
 
         return this.getNotes()
-        .then((notes) => notes.filter((note) => note.id !
-        == id))
+        .then((notes) => notes.filter((note) => note.id !== id))
+    
         .then((filteredNotes)=>
         this.write(filteredNotes));
     }
@@ -79,5 +79,3 @@ module.exports = new file();
 
 
 
-
-module.exports = new Store();
