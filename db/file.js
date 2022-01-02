@@ -50,6 +50,11 @@ class file {
 
     removeNote(id) {
 
+        return this.getNotes()
+        .then((notes) => notes.filter((note) => note.id !
+        == id))
+        .then((filteredNotes)=>
+        this.write(filteredNotes));
     }
 }
 
