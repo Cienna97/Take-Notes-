@@ -31,9 +31,29 @@ class file {
             return parsedNotes;
         });
     }
+
+    addNote(note) {
+        const {header, text} = note;
+
+        if (!header || !text) {
+            throw new Error("Must fill in 'header' and 'text' ");
+        }
+            const newNote = {title, text, id: uuidv1() };
+
+            return this.read.getNotes()
+            .then((notes) => [...notes, newNote])
+            .then((updatedNotes) =>
+            this.write(updatedNotes))
+            .then(() => newNote);
+
+    }
+
+    removeNote(id) {
+
+    }
 }
 
-
+module.exports = new file();
 
 
 
