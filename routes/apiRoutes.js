@@ -1,9 +1,10 @@
 const router = require('express').Router();
+const res = require('express/lib/response');
 const store = require('../db/file');
 
 
 //
-router.get('/notes', (req, res) => {
+router.get('/notes', (req,res) => {
     file
     .getNotes()
     .then((notes) => {
@@ -19,9 +20,11 @@ router.post('/notes', (req, res) => {
     .catch((err) => res.status(500).json(err));
     });
 
-    
-
-
-});
+    router.delete('/notes/:id', (req,res) => {
+        file
+        .removeNote(req.params.id)
+        .then(() => res.json({ok: true}))
+        .catch((err) => res.status(500).json(err));
+    });
 
 module.export = router;
