@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const res = require('express/lib/response');
+//const res = require('express/lib/response');
 const file = require('../db/file');
 
 
-//
+
 router.get('/notes', (req,res) => {
     file
     .getNotes()
@@ -27,4 +27,4 @@ router.post('/notes', (req, res) => {
         .catch((err) => res.status(500).json(err));
     });
 
-module.export = router;
+module.exports = router;
