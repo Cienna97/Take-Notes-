@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const res = require('express/lib/response');
-const store = require('../db/file');
+const file = require('../db/file');
 
 
 //
