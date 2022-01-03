@@ -29,15 +29,17 @@ Uses Express.js back end and will save and retrieve data from a JSON file.
 
 # Links 
 
-Github: 
+Github: https://github.com/Cienna97/Take-Notes-.git
 
 Live Application:
 
-Heroku: 
+Heroku: https://glacial-bayou-88912.herokuapp.com/notes
 
 # Screenshot 
 
 Screen Shot of Application 
 
 # Future Development
+
+Working on this application it's set up and deployed to heroku but going to get the noted to save if I have more time in the future.
 
